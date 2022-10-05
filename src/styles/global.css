@@ -25,12 +25,12 @@ body {
   padding: 2em;
   padding-block-start: 1em;
   align-items: center;
-  gap: .3em;
+  gap: .2em;
 }
 
 @media screen and (min-width: 768px) {
   #root {
-    gap: 3em;
+    gap: .8em;
   }
 
   body {
@@ -46,8 +46,8 @@ body {
   box-shadow: 4px 8px 32px #0003;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
   border-radius: 1.2em;
+  overflow-y: auto;
 }
 
 

@@ -12,7 +12,7 @@ function App() {
   const [scrollVisible, setScrollVisible] = useState(false);
   const table = useRef(null);
 
-  const items = new Array(50000).fill().map((_value, index) => ({
+  const items = new Array(100000).fill().map((_value, index) => ({
     id: index,
     firstName: faker.name.firstName(),
     lastName: faker.name.lastName(),
