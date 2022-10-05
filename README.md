@@ -1,4 +1,4 @@
-# Virtualize Application
+# Virtualizer Application
 
 This is an application that virtualizes list from a server without any downtime after load.
 
@@ -22,7 +22,7 @@ This is an application that virtualizes list from a server without any downtime 
 
 | Parameter | Type     | Description                           |
 | :-------- | :------- | :------------------------------------ |
-| `Amount`  | `string` | **Required**. Amount of item to fetch |
+| `type`    | `string` | **Required**. Amount of item to fetch |
 
 #### name
 
@@ -138,7 +138,7 @@ Optimized scroll to top feature for all browsers and screens
 
 ## Challenges faced
 
-- Had challenges trying to figure out the best way to render list without down time, considering I can't use any external Library for that. So, on my research I had to make sure I was optimizing every feature in the Application, from fetching data, making code light weight, and using CSS "content-display: auto;" to improver performance
+- Had challenges trying to figure out the best way to render list without down time, considering I can't use any external Library for that. So, on my research I had to make sure I was optimizing every feature in the Application, from fetching data, making code light weight, and using CSS "content-display: auto;" to improve performance
 
 ## Run Locally
 
@@ -151,7 +151,7 @@ Clone the project
 Go to the project directory
 
 ```bash
-  cd virtualize
+  cd virtualizer
 ```
 
 Install dependencies
