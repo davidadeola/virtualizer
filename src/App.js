@@ -1,25 +1,57 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles/global.css";
+import Window from "./components/window";
+import { faker } from "@faker-js/faker";
+import { FormControlLabel, Switch } from "@material-ui/core";
+import React from "react";
+import Logo from "./components/logo/logo";
 
-function App() {
+export default function App() {
+  const [isVirtualizationEnabled, setIsVirtualizationEnabled] =
+    React.useState(true);
+
+  const items = new Array(200000).fill().map((_value, index) => ({
+    id: index,
+    firstName: faker.name.firstName(),
+    lastName: faker.name.lastName(),
+  }));
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <>
+      <div
+        style={{
+          position: "fixed",
+          top: 0,
+          right: 0,
+        }}
+      >
+        <FormControlLabel
+          control={
+            <Switch
+              onChange={(e) => setIsVirtualizationEnabled(e.target.checked)}
+              checked={isVirtualizationEnabled}
+            />
+          }
+          label={
+            isVirtualizationEnabled
+              ? "Virtualization Enabled"
+              : "Virtualization Disabled"
+          }
+        />
+      </div>
+      <div className="App">
+        <Logo />
+        <Window
+          isVirtualizationEnabled={isVirtualizationEnabled}
+          rowHeight={60}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          {items?.map((item) => (
+            <li className="rowContainer" key={item?.id}>
+              <span className="row">{item?.id + 1}</span>
+              <span className="row">{item?.firstName}</span>
+              <span className="row">{item?.lastName}</span>
+            </li>
+          ))}
+        </Window>
+      </div>
+    </>
   );
 }
-
-export default App;
