@@ -4,30 +4,11 @@ import useElementSize from "../hooks/useElementSize";
 
 const bufferedItems = 2;
 
-const Window = ({
-  rowHeight,
-  children,
-  gap = 10,
-  isVirtualizationEnabled = true,
-}) => {
+const Window = ({ rowHeight, children, gap = 10 }) => {
   const [containerRef, { height: containerHeight }] = useElementSize();
   const [scrollPosition, setScrollPosition] = React.useState(0);
 
-  // get the children to be renderd
   const visibleChildren = React.useMemo(() => {
-    if (!isVirtualizationEnabled)
-      return children.map((child, index) =>
-        React.cloneElement(child, {
-          style: {
-            position: "absolute",
-            top: index * rowHeight + index * gap,
-            height: rowHeight,
-            left: 0,
-            right: 0,
-            lineHeight: `${rowHeight}px`,
-          },
-        })
-      );
     const startIndex = Math.max(
       Math.floor(scrollPosition / rowHeight) - bufferedItems,
       0
@@ -50,14 +31,7 @@ const Window = ({
         },
       })
     );
-  }, [
-    children,
-    containerHeight,
-    rowHeight,
-    scrollPosition,
-    gap,
-    isVirtualizationEnabled,
-  ]);
+  }, [children, containerHeight, rowHeight, scrollPosition, gap]);
 
   const onScroll = React.useMemo(
     () =>
