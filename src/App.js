@@ -1,7 +1,7 @@
 import "./styles/global.css";
 import Window from "./components/window";
 import { faker } from "@faker-js/faker";
-import { FormControlLabel, Switch } from "@material-ui/core";
+import { FormControlLabel, Switch } from "@mui/material";
 import React from "react";
 import Logo from "./components/logo/logo";
 
