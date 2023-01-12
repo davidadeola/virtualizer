@@ -1,70 +1,188 @@
-# Getting Started with Create React App
+# Virtualizer Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is an application that virtualizes list from a server without any downtime after load.
 
-## Available Scripts
+## API Reference
 
-In the project directory, you can run:
+#### Get all items
 
-### `npm start`
+```http
+  GET https://public.opendatasoft.com/api/records/1.0/
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+| Parameter | Type     | Description                    |
+| :-------- | :------- | :----------------------------- |
+| `api_key` | `string` | **Required**. Key value amount |
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### Get item
 
-### `npm test`
+```http
+  GET https://public.opendatasoft.com/api/records/1.0/search/?dataset=modis_c6_global_7d&q=&rows=${dataAmount}
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Parameter | Type     | Description                           |
+| :-------- | :------- | :------------------------------------ |
+| `Amount`  | `string` | **Required**. Amount of item to fetch |
 
-### `npm run build`
+#### dataAmount
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Takes the amount
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Authors
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [@davidadeola](https://www.github.com/davidadeola)
 
-### `npm run eject`
+## Badges
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Add badges from somewhere like: [shields.io](https://shields.io/)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Color Reference
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+| Color          | Hex                                                              |
+| -------------- | ---------------------------------------------------------------- |
+| Primary Color  | ![#ba7dff](https://via.placeholder.com/10/ba7dff?text=+) #ba7dff |
+| bG-Color light | ![#6E2FB5](https://via.placeholder.com/10/6E2FB5?text=+) #6E2FB5 |
+| primary light  | ![#e1f5fe](https://via.placeholder.com/10/e1f5fe?text=+) #e1f5fe |
+| bG-Color dark  | ![#361758](https://via.placeholder.com/10/361758?text=+) #361758 |
 
-## Learn More
+## Deployment
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Link: [Virtualize](https://virtualizer.netlify.app/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Features
 
-### Code Splitting
+- dark Mode
+- Scroll to top
+- Speed Scroll
+- Loader animation
+- Fullscreen mode
+- Cross platform
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🚀 About Me
 
-### Analyzing the Bundle Size
+I'm a full stack developer...
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🔗 Links
 
-### Making a Progressive Web App
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/david-adeola)
+[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/DavidAdeola_)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Other Common Github Profile Sections
 
-### Advanced Configuration
+👩‍💻 I'm currently working on MetaChat
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+🧠 I'm currently learning Vuw.js, three.js
 
-### Deployment
+👯‍♀️ I'm looking to collaborate on blockchain projects
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+🤔 I'm looking for help with...
 
-### `npm run build` fails to minify
+💬 Ask me about anything Frameworks
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+📫 How to reach me linkedin
+
+😄 Pronouns He/Him
+
+⚡️ Fun fact I love getting thing done
+
+## 🛠 Skills
+
+Javascript, HTML, CSS, React.js, Docker, Webpack
+
+## Installation
+
+Install virtualize with npm
+
+```bash
+  npm install virtualize
+  cd virtualize
+```
+
+Install packages
+
+```bash
+  npm install
+```
+
+### Logo
+
+![Virtualize](https://res.cloudinary.com/devkp5za2/image/upload/v1664443697/virtualize_gb7hwu.png)
+
+## Optimizations
+
+Optimized display rendering, to fetch data but not load, until scroll actions.
+Optimized scroll to top feature for all browsers and screens
+
+## Roadmap
+
+- Initialize project using Create React App
+- Create file and folder structures for App
+- Pull data from API and test Render
+- Style table and table content
+- Set loading state for first Render
+- Add Scroll design
+- Fix CSS border styling
+- Add scroll to top and Logo
+- Change scroll thumb color
+- Speed up loader and resize container
+- Resize table container
+- Improve loader animation text
+
+## Design choices
+
+- Color choice is a rarely used dark mode feature for lists, reason for color is to make list look more attractive
+- Choice of Language is React chose this because is Widely used and it is very easy to implement
+
+## Challenges faced
+
+- Had challenges trying to figure out the best way to render list without down time, considering I can't use any external Library for that. So, on my research I had to make sure I was optimizing every feature in the Application, from fetching data, making code light weight, and using CSS "content-display: auto;" to improver performance
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/davidadeola/virtualize.git
+```
+
+Go to the project directory
+
+```bash
+  cd virtualize
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm start
+```
+
+## Screenshots
+
+### Loading State
+
+![Loading State](https://res.cloudinary.com/devkp5za2/image/upload/v1664444341/unnamed_2_lajdez.jpg)
+
+### FIrst Render
+
+![First Render](https://res.cloudinary.com/devkp5za2/image/upload/v1664444342/unnamed_3_tzadbk.jpg)
+
+## Support
+
+For support, email adeoladavidoluwole@gmail.com .
+
+## Tech Stack
+
+**Client:** React, CSS, JavaScript
+
+**Server:** API
