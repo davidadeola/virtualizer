@@ -28,10 +28,6 @@ This is an application that virtualizes list from a server without any downtime 
 
 Takes the amount
 
-## Authors
-
-- [@davidadeola](https://www.github.com/davidadeola)
-
 ## Badges
 
 Add badges from somewhere like: [shields.io](https://shields.io/)
